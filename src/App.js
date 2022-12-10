@@ -34,6 +34,15 @@ function App() {
           playlists: playlists,
         });
       });
+
+      spotify
+        .getPlaylist("https://open.spotify.com/playlist/37i9dQZEVXcQ9COmYvdajy")
+        .then((response) => {
+          dispatch({
+            type: "SET_DISCOVER_WEEKLY",
+            discover_weekly: response,
+          });
+        });
     }
     //console.log("I have a toke: ", token);
   }, []);
