@@ -1,4 +1,3 @@
-//all the imports 
 import { useEffect, useState } from "react";
 import "./App.css";
 import Login from "./Login";
@@ -37,7 +36,7 @@ function App() {
       });
 
       spotify
-        .getPlaylist("https://open.spotify.com/playlist/37i9dQZEVXcQ9COmYvdajy")
+        .getPlaylist("37i9dQZEVXcQ9COmYvdajy")
         .then((response) => {
           dispatch({
             type: "SET_DISCOVER_WEEKLY",
